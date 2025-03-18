@@ -209,7 +209,7 @@ def process_data(df):
         values = df[col].unique()
         unique_values.update([v for v in values if v and v.strip()])
     
-    st.write(f"Valores únicos encontrados: {', '.join([f'"{v}"' for v in unique_values if v and v.strip()])}")
+    st.write(f"Valores únicos encontrados: {', '.join([f'\"{v}\"' for v in unique_values if v and v.strip()])}")
     st.info("Interpretación: '1' o 'instalada' = Instalado, 'no aplica' = No Aplica, '' (vacío) = Pendiente")
         
     return df, cols_info, norm_cols
